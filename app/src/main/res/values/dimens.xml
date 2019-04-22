@@ -4,4 +4,5 @@
     <dimen name="standar_padding">15dp</dimen>
     <dimen name="standar_width">150dp</dimen>
     <dimen name="text_size_poke_standar">18sp</dimen>
+    <dimen name= "spacing">4dp</dimen>
 </resources>
