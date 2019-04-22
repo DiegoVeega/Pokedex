@@ -29,7 +29,7 @@ class PokemonList : Fragment() {
     internal lateinit var recycler_view:RecyclerView
 
     init{
-        var retrofit = RetrofitClient.instance
+        var retrofit:Retrofit = RetrofitClient.instance
         iPokemon = retrofit.create(InterfacePokemonList::class.java)
     }
 
