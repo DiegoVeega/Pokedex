@@ -3,6 +3,9 @@
     <dimen name="general_matgin">10dp</dimen>
     <dimen name="standar_padding">15dp</dimen>
     <dimen name="standar_width">150dp</dimen>
-    <dimen name="text_size_poke_standar">18sp</dimen>
+    <dimen name="text_size_poke_standar">26sp</dimen>
     <dimen name= "spacing">4dp</dimen>
+    <dimen name="general_margin">16dp</dimen>
+    <dimen name="radius_standar">8dp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
 </resources>
