@@ -4,4 +4,5 @@ import com.veegadiego.pokedex.Model.Pokemon
 
 object Comun {
     var pokemonList:List<Pokemon> = ArrayList()
+    val KEY_ENABLE_HOME = "position"
 }

@@ -1,14 +1,17 @@
 package com.veegadiego.pokedex.Adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.veegadiego.pokedex.Comun.Comun
 import com.veegadiego.pokedex.Interface.InterfaceItemClickListener
 import com.veegadiego.pokedex.Model.Pokemon
 import com.veegadiego.pokedex.R
@@ -32,11 +35,14 @@ class PokemonListAdater (internal var context: Context, internal var pokemonList
         holder.pokemon_name.text = pokemonList[position].name
 
         //SOBREESCRITURA DE METODOS DE INTERFAZ CLICK LISTENER
+        //Por medio de esta sobreescritura se dira lo que debe hacer al dar click
         holder.setItemClickListener(object:InterfaceItemClickListener{
-            override fun onClick(view: View, position: Integer) {
-                Toast.makeText(context,"Click a pokemon" + pokemonList[position.toInt()].name,Toast.LENGTH_LONG).show()
+            override fun onClick(view: View, position: Int) {
+                //Toast.makeText(context,"Este Pokemon es " + pokemonList[position.toInt()].name,Toast.LENGTH_LONG).show()
+                LocalBroadcastManager.getInstance(context).sendBroadcast(Intent(Comun.KEY_ENABLE_HOME).putExtra("position",position))
 
             }
+
         })
     }
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
