@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when(item!!.itemId){
             android.R.id.home -> {
-                toolbar.title = "Pokedex"
+                toolbar.title = "Pokemon registrados"
 
                 //Limpiar fragmentos de detalle
                 supportFragmentManager.popBackStack("detalle",FragmentManager.POP_BACK_STACK_INCLUSIVE) //Nombre del fragmento en stack de addtoBackStack
