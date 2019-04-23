@@ -1,14 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context=".PokemonDetalle">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".PokemonDetalle"
+    android:background="#242400"
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment"/>
+            android:layout_margin="@dimen/general_margin"
+            app:cardCornerRadius="@dimen/spacing"
+            app:cardBackgroundColor="#ffffff">
 
-</FrameLayout>
+            <LinearLayout
+                android:layout_width="340dp"
+                android:layout_height="523dp"
+                android:layout_gravity="center"
+                android:layout_margin="80dp"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing">
+
+                <ImageView
+                    android:id="@+id/pokemon_image"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/spacing"
+                    android:text="POKEMON"
+                    android:textColor="@color/dark_color"
+                    android:textSize="@dimen/text_size_poke_standar"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_alto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/spacing"
+                    android:text="Altura"
+                    android:textColor="@color/dark_color"
+                    android:textSize="@dimen/text_size_medium"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_peso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/spacing"
+                    android:text="Peso"
+                    android:textColor="@color/dark_color"
+                    android:textSize="@dimen/text_size_medium"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/spacing"
+                    android:text="Tipo"
+                    android:textColor="@color/dark_color"
+                    android:textSize="@dimen/text_size_medium"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <TextView
+                    android:id="@+id/tv_debil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/spacing"
+                    android:text="Debilidad"
+                    android:textColor="@color/dark_color"
+                    android:textSize="@dimen/text_size_medium"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_debil"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <TextView
+                    android:id="@+id/tv_prev"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/spacing"
+                    android:text="Pre-Evolucion"
+                    android:textColor="@color/dark_color"
+                    android:textSize="@dimen/text_size_medium"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_prev"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <TextView
+                    android:id="@+id/tv_evolucion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/spacing"
+                    android:text="Evolucion"
+                    android:textColor="@color/dark_color"
+                    android:textSize="@dimen/text_size_medium"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_evolucion"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

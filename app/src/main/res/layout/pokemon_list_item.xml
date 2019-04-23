@@ -24,10 +24,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/pokemon_name"
-                android:text="super pokemon"
+                android:text="Charmander"
                 android:layout_gravity="center"
                 android:layout_margin="@dimen/standar_padding"
-                android:textSize="@dimen/text_size_poke_standar"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="@color/dark_color"/>
 
